@@ -1,13 +1,11 @@
 name: Github Pages
 on:
-  push:
-    branches:
-      - master
+  release:
+    types: [published]
 permissions:
   contents: read
 jobs:
   deploy:
-    needs: build
     permissions:
       pages: write
       id-token: write
