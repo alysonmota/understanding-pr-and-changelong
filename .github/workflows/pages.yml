@@ -14,8 +14,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: public
   deploy:
+    needs: build
     permissions:
       pages: write
       id-token: write
