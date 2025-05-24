@@ -1,7 +1,7 @@
 const { buildRegExp, optional, capture, oneOrMore, startOfString, word, char, endOfString, any, whitespace } = require('ts-regex-builder')
 
 const type = [char(0x5b), capture(oneOrMore(word)), char(0x5d)]
-const scope = [char(0x5b), optional(oneOrMore(word)), char(0x5d)]
+const scope = [char(0x5b), capture(oneOrMore(word)), char(0x5d)]
 const subject = capture(oneOrMore(any))
 /*
 [type] subject
@@ -32,7 +32,7 @@ module.exports = {
 			'@semantic-release/git',
 			{
 				assets: ['CHANGELOG.md', 'package.json'],
-				message: '[release] ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+				message: '[release] ${nextRelease.version}\n\n${nextRelease.notes}',
 			},
 		],
 		'@semantic-release/github',
