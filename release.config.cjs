@@ -17,7 +17,7 @@ module.exports = {
 			{
 				parserOpts: {
 					headerPattern: semanticCommitRegex,
-					headerCorrespondence: ['type', 'subject'],
+					headerCorrespondence: ['type', 'scope', 'subject'],
 				},
 				releaseRules: [
 					{ type: 'fix', release: 'patch' },
