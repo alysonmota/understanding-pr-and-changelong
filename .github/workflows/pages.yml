@@ -4,6 +4,13 @@ on:
     workflows: ["Release"]
     types: [completed]
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: public
   deploy:
     permissions:
       pages: write
