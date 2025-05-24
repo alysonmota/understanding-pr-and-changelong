@@ -15,10 +15,6 @@ module.exports = {
 		[
 			'@semantic-release/commit-analyzer',
 			{
-				parserOpts: {
-					headerPattern: semanticCommitRegex,
-					headerCorrespondence: ['type', 'scope', 'subject'],
-				},
 				releaseRules: [
 					{ type: 'fix', release: 'patch' },
 					{ type: 'feat', release: 'minor' },
