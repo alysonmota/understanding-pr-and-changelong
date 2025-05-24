@@ -1,3 +1,5 @@
+# [0.3.0](https://github.com/alysonmota/understanding-pr-and-changelong/compare/v0.2.6...v0.3.0) (2025-05-24)
+
 ## [0.2.6](https://github.com/alysonmota/understanding-pr-and-changelong/compare/v0.2.5...v0.2.6) (2025-05-24)
 
 ## [0.2.5](https://github.com/alysonmota/understanding-pr-and-changelong/compare/v0.2.4...v0.2.5) (2025-05-24)
