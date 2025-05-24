@@ -1,9 +1,18 @@
-import { buildRegExp, capture, oneOrMore, startOfString, word, char, endOfString, any } from 'ts-regex-builder'
+import { buildRegExp, optional, capture, oneOrMore, startOfString, word, char, endOfString, any, whitespace } from 'ts-regex-builder'
+
+const type = [char(0x5b), capture(oneOrMore(word)), char(0x5d)]
+const scope = [char(0x5b), optional(oneOrMore(word)), char(0x5d)]
+const subject = capture(oneOrMore(any))
+/*
+[type] subject
+[type][scope] subject
+*/
+const semanticCommitRegex = buildRegExp([startOfString, ...type, optional(scope), whitespace, subject, endOfString])
 
 export default {
 	parserPreset: {
 		parserOpts: {
-			headerPattern: buildRegExp([startOfString, '@', capture(oneOrMore(word)), char(32), capture(oneOrMore(any)), endOfString]),
+			headerPattern: semanticCommitRegex,
 			headerCorrespondence: ['type', 'subject'],
 		},
 	},
