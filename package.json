@@ -1,0 +1,17 @@
+{
+	"name": "understanding-pr-and-changelong",
+	"type": "module",
+	"private": true,
+	"packageManager": "bun@1.2.14",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@commitlint/cli": "19.8.1",
+		"@commitlint/config-conventional": "19.8.1",
+		"@mota.alyson/presets": "1.1.8",
+		"husky": "9.1.7",
+		"ts-regex-builder": "1.8.2"
+	},
+	"scripts": {
+		"prepare": "husky"
+	}
+}
